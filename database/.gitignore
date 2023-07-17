@@ -1,1 +1,6 @@
 *.sqlite*
+.env
+laravel_setup.sh
+mysql_install.sh
+setup.sh
+
