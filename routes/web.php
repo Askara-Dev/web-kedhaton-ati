@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('web.layouts.master');
+    return view('web.home');
 });
 
 Route::get('/blogs', function () {

@@ -3,8 +3,8 @@
 
       <a href="/" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="https://github.com/Askara-Dev/web-kedhaton-ati/assets/68774609/314300b6-d450-42c2-b4fa-411364cf99cf" alt="Kedhaton Ati"> -->
-        <h1>Kedhaton Ati</h1>
+        <img src="assets/img/logo.png" alt="Kedhaton Ati">
+        <!-- <h1>Kedhaton Ati</h1> -->
       </a>
 
       <nav id="navbar" class="navbar">
