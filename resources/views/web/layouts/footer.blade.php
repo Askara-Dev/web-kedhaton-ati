@@ -11,17 +11,17 @@
           <div class="col-6 col-lg-2">
             <h3 class="footer-heading">Navigation</h3>
             <ul class="footer-links list-unstyled">
-              <li><a href="index.html"><i class="bi bi-chevron-right"></i> Home</a></li>
-              <li><a href="index.html"><i class="bi bi-chevron-right"></i> Blog</a></li>
-              <li><a href="category.html"><i class="bi bi-chevron-right"></i> Categories</a></li>
+              <li><a href="/"><i class="bi bi-chevron-right"></i> Home</a></li>
+              <li><a href="/blogs"><i class="bi bi-chevron-right"></i> Blog</a></li>
+              <li><a href="#"><i class="bi bi-chevron-right"></i> Categories</a></li>
               <!-- <li><a href="single-post.html"><i class="bi bi-chevron-right"></i> Single Post</a></li> -->
-              <li><a href="about.html"><i class="bi bi-chevron-right"></i> About us</a></li>
-              <li><a href="contact.html"><i class="bi bi-chevron-right"></i> Contact</a></li>
+              <li><a href="/about"><i class="bi bi-chevron-right"></i> About us</a></li>
+              <li><a href="/contact"><i class="bi bi-chevron-right"></i> Contact</a></li>
             </ul>
           </div>
           <div class="col-6 col-lg-2">
             <h3 class="footer-heading">Categories</h3>
-            <ul class="footer-links list-unstyled">
+            <!-- <ul class="footer-links list-unstyled">
               <li><a href="category.html"><i class="bi bi-chevron-right"></i> Business</a></li>
               <li><a href="category.html"><i class="bi bi-chevron-right"></i> Culture</a></li>
               <li><a href="category.html"><i class="bi bi-chevron-right"></i> Sport</a></li>
@@ -31,7 +31,7 @@
               <li><a href="category.html"><i class="bi bi-chevron-right"></i> Startups</a></li>
               <li><a href="category.html"><i class="bi bi-chevron-right"></i> Travel</a></li>
 
-            </ul>
+            </ul> -->
           </div>
 
           <div class="col-lg-4">
@@ -53,7 +53,7 @@
         <div class="row justify-content-between">
           <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
             <div class="copyright">
-              © Copyright <strong><span>AskaraDev</span></strong>. All Rights Reserved
+              © Copyright <strong><span>Kedhatonati</span></strong>. All Rights Reserved
             </div>
 
             <div class="credits">
@@ -68,11 +68,11 @@
 
           <div class="col-md-6">
             <div class="social-links mb-3 mb-lg-0 text-center text-md-end">
-              <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              <a href="https://www.youtube.com/@kedhatonati335" class="youtube"><i class="bi bi-youtube"></i></a>
+              <a href="https://www.facebook.com/Kedhaton.ati/" class="facebook"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/kedhaton.ati/" class="instagram"><i class="bi bi-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bi bi-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a> -->
             </div>
 
           </div>
