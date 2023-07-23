@@ -1,6 +1,6 @@
 
 <li>
-    <a href="single-post.html" class="d-flex align-items-center">
+    <a href="/blogs" class="d-flex align-items-center">
         <img src="assets/img/post-sq-1.jpg" alt="" class="img-fluid me-3">
         <div>
         <div class="post-meta d-block"><span class="date">Budaya</span> <span class="mx-1">&bullet;</span> <span>15 Mei 2020</span></div>
@@ -10,7 +10,7 @@
 </li>
 
 <li>
-    <a href="single-post.html" class="d-flex align-items-center">
+    <a href="/blogs" class="d-flex align-items-center">
         <img src="assets/img/post-sq-2.jpg" alt="" class="img-fluid me-3">
         <div>
         <div class="post-meta d-block"><span class="date">Budaya</span> <span class="mx-1">&bullet;</span> <span>15 Mei 2020</span></div>
@@ -20,7 +20,7 @@
 </li>
 
 <li>
-    <a href="single-post.html" class="d-flex align-items-center">
+    <a href="/blogs" class="d-flex align-items-center">
         <img src="assets/img/post-sq-3.jpg" alt="" class="img-fluid me-3">
         <div>
         <div class="post-meta d-block"><span class="date">Budaya</span> <span class="mx-1">&bullet;</span> <span>15 Mei 2020</span></div>
