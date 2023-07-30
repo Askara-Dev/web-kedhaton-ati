@@ -28,3 +28,16 @@ Route::get('/contact', function () {
 Route::get('/about', function () {
     return view('web.about');
 });
+
+// for testing
+Route::get('/test',function() {
+    return view('welcome');
+});
+
+Auth::routes([
+    'register' => false,
+]);
+
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
+    Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+});
