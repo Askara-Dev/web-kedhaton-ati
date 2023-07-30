@@ -30,9 +30,9 @@ Route::get('/about', function () {
 });
 
 // for testing
-Route::get('/test',function() {
-    return view('welcome');
-});
+// Route::get('/test',function() {
+//     return view('welcome');
+// });
 
 Auth::routes([
     'register' => false,
