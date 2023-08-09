@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,5 +40,9 @@ Auth::routes([
 ]);
 
 Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
+    //dashboard
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
+
+    //categories
+    Route::resource('/categories', CategoryController::class);
 });
