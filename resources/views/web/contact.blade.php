@@ -15,16 +15,17 @@
           <div class="col-md-4">
             <div class="info-item">
               <i class="bi bi-geo-alt"></i>
-              <h3>Address</h3>
-              <address>A108 Adam Street, NY 535022, USA</address>
+              <h3>Alamat</h3>
+              <address>Surakarta, Jawa Tengah</address>
             </div>
-          </div><!-- End Info Item -->
+          </div>
+          <!-- End Info Item -->
 
           <div class="col-md-4">
             <div class="info-item info-item-borders">
-              <i class="bi bi-phone"></i>
-              <h3>Phone Number</h3>
-              <p><a href="tel:+155895548855">+1 5589 55488 55</a></p>
+              <i class="bi bi-whatsapp"></i>
+              <h3>WhatsApp</h3>
+              <p><a href="https://wa.me/+6285855565864">085855565864</a></p>
             </div>
           </div><!-- End Info Item -->
 
@@ -32,15 +33,19 @@
             <div class="info-item">
               <i class="bi bi-envelope"></i>
               <h3>Email</h3>
-              <p><a href="mailto:info@example.com">info@example.com</a></p>
+              <p><a href="mailto:kedhatonati@gmail.com">kedhatonati@gmail.com</a></p>
             </div>
           </div><!-- End Info Item -->
 
         </div>
 
         <br>
-
-        
+        <br>
+        <div class="col-md-12">
+            <div class="info-item">
+                <img src="assets/img/donasi.jpeg" alt="" class="img-fluid">
+            </div>
+          </div>
 
         <!-- <div class="form mt-5">
           <form action="forms/contact.php" method="post" role="form" class="php-email-form">
