@@ -15,6 +15,10 @@
    {{-- <link rel="stylesheet" href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}"> --}}
    <!-- icon flag -->
    <link rel="stylesheet" href="{{ asset('vendor/flag-icon-css/css/flag-icon.min.css') }}">
+   {{-- css external --}}
+   @stack('css-external')
+   {{-- css external --}}
+   @stack('css-internal')
 </head>
 
 <body>
@@ -55,6 +59,13 @@
    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
    <!-- my-dashboard -->
    <script src="{{ asset('vendor/my-dashboard/js/dashboard.js') }}"></script>
+   <!-- Include SweetAlert library from a CDN -->
+   @include('sweetalert::alert')
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+   {{-- javascript external --}}
+   @stack('javascript-external')
+   @stack('javascript-internal')
 </body>
 
 </html>
