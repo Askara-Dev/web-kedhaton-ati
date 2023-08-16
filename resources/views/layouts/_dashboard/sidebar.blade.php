@@ -9,24 +9,28 @@
          </a>
          <div class="sb-sidenav-menu-heading">Master</div>
 
+         {{-- Posts --}}
          <a class="nav-link" href="#">
             <div class="sb-nav-link-icon">
                <i class="far fa-newspaper"></i>
             </div>
             Posts
          </a>
+         {{-- Categories --}}
          <a class="nav-link {{ set_active(['categories.index', 'categories.create', 'categories.edit', 'categories.show']) }}" href="{{ route('categories.index') }}">
             <div class="sb-nav-link-icon">
                <i class="fas fa-bookmark"></i>
             </div>
             Categories
          </a>
-         <a class="nav-link" href="#">
+         {{-- Tags --}}
+         <a class="nav-link {{ set_active(['tags.index', 'tags.create', 'tags.edit']) }} " href="{{ route('tags.index') }}">
             <div class="sb-nav-link-icon">
                <i class="fas fa-tags"></i>
             </div>
             Tags
          </a>
+         {{-- User --}}
          <div class="sb-sidenav-menu-heading">User permission</div>
          <a class="nav-link" href="#">
             <div class="sb-nav-link-icon">
@@ -34,6 +38,7 @@
             </div>
             User
          </a>
+         {{-- Role --}}
          <a class="nav-link" href="#">
             <div class="sb-nav-link-icon">
                <i class="fas fa-user-shield"></i>

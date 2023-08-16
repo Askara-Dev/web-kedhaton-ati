@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TagController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -47,6 +48,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
 
     //categories
     Route::resource('/categories', CategoryController::class);
+
+    // tags
+    Route::resource('/tags', TagController::class)->except(['show']);
 
     // File manager
     Route::group(['prefix' => 'filemanager'], function () {
