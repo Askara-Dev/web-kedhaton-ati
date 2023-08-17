@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\FileManagerController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TagController;
 use App\Models\Tag;
@@ -44,7 +45,7 @@ Auth::routes([
     'register' => false,
 ]);
 
-Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
+Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     //dashboard
     Route::get('/', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard.index');
 
@@ -62,6 +63,13 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function(){
 
     // File manager
     Route::group(['prefix' => 'filemanager'], function () {
+        Route::get(
+            '/index',
+            [
+                FileManagerController::class,
+                'index'
+            ]
+        )->name('filemanager.index');
         \UniSharp\LaravelFilemanager\Lfm::routes();
     });
 });

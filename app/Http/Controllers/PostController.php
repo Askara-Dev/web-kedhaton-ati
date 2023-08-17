@@ -91,9 +91,7 @@ class PostController extends Controller
             Alert::success('Tambah Post', 'Berhasil');
 
             return redirect()->route('posts.index');
-
         } catch (\Throwable $th) {
-            //throw $th;
             DB::rollBack();
             // sweet alert
             Alert::error('Tambah Post', 'Gagal');
@@ -102,12 +100,9 @@ class PostController extends Controller
                 $request['tag'] = Tag::select('id', 'title')->whereIn('id', $request->tag)->get();
             }
             return redirect()->back()->withInput($request->all());
-
         } finally {
             DB::commit();
         }
-
-
     }
 
     /**
@@ -137,7 +132,6 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        // dd($request->all());
         $validator = Validator::make(
             $request->all(),
             [
@@ -181,9 +175,7 @@ class PostController extends Controller
             Alert::success('Edit Post', 'Berhasil');
 
             return redirect()->route('posts.index');
-
         } catch (\Throwable $th) {
-            //throw $th;
             DB::rollBack();
             // sweet alert
             Alert::error('Edit Post', 'Gagal');
@@ -192,7 +184,6 @@ class PostController extends Controller
                 $request['tag'] = Tag::select('id', 'title')->whereIn('id', $request->tag)->get();
             }
             return redirect()->back()->withInput($request->all());
-
         } finally {
             DB::commit();
         }
@@ -217,9 +208,7 @@ class PostController extends Controller
             Alert::success('Delete Post', 'Berhasil');
 
             return redirect()->route('posts.index');
-
         } catch (\Throwable $th) {
-            //throw $th;
             DB::rollBack();
             // sweet alert
             Alert::error('Delete Post', 'Gagal');
@@ -229,7 +218,8 @@ class PostController extends Controller
         }
     }
 
-    private function statuses() {
+    private function statuses()
+    {
         return [
             'draft' => 'Draft',
             'publish' => 'Publish'
