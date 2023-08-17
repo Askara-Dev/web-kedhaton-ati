@@ -15,13 +15,13 @@ class TagController extends Controller
     public function index(Request $request)
     {
         $tags = $request->get('keyword') ? Tag::search($request->keyword)->get() : Tag::all();
-        // $tags = Tag::all();
         return view('tags.index', compact('tags'));
     }
 
-    public function select(Request $request) {
+    public function select(Request $request)
+    {
         $tags = [];
-        if ($request-> has('q')) {
+        if ($request->has('q')) {
             $tags = Tag::select('id', 'title')->search($request->q)->get();
         } else {
             $tags = Tag::select('id', 'title')->limit(5)->get();
@@ -64,10 +64,7 @@ class TagController extends Controller
             Alert::error('Tambah Tag', 'Gagal');
 
             return redirect()->back()->withInput($request->all());
-
         }
-
-
     }
 
     /**
@@ -112,7 +109,6 @@ class TagController extends Controller
             Alert::error('Edit Tag', 'Gagal');
 
             return redirect()->back()->withInput($request->all());
-
         }
     }
 
@@ -125,10 +121,8 @@ class TagController extends Controller
             $tag->delete();
 
             Alert::success('Delete Tag', 'Berhasil');
-
         } catch (\Throwable $th) {
             Alert::error('Delete Tag', 'Gagal');
-
         }
 
         return redirect()->back();

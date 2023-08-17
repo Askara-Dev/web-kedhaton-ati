@@ -16,8 +16,8 @@ class CategoryController extends Controller
     public function index(Request $request)
     {
         $categories = Category::with('descendants');
-        
-        if($request->has('keyword') && trim($request->keyword)) {
+
+        if ($request->has('keyword') && trim($request->keyword)) {
             $categories->search($request->keyword);
         } else {
             $categories->onlyParent();
@@ -28,9 +28,10 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function select(Request $request) {
+    public function select(Request $request)
+    {
         $categories = [];
-        if ($request -> has('q')) {
+        if ($request->has('q')) {
             $search = $request->q;
             $categories = Category::select('id', 'title')->where('title', 'LIKE', "%$search%")->limit(6)->get();
         } else {
@@ -38,7 +39,6 @@ class CategoryController extends Controller
         }
 
         return response()->json($categories);
-
     }
 
     /**
@@ -67,7 +67,7 @@ class CategoryController extends Controller
         );
 
         if ($validator->fails()) {
-            if($request->has('parent_category')) {
+            if ($request->has('parent_category')) {
                 $request['parent_category'] = Category::select('id', 'title')->find($request->parent_category);
             }
             return redirect()->back()->withInput($request->all())->withErrors($validator);
@@ -85,15 +85,13 @@ class CategoryController extends Controller
 
             Alert::success('Tambah Kategori', 'Berhasil');
             return redirect()->route('categories.index');
-
         } catch (\Throwable $th) {
-            if($request->has('parent_category')) {
+            if ($request->has('parent_category')) {
                 $request['parent_category'] = Category::select('id', 'title')->find($request->parent_category);
             }
             Alert::error('Tambah Kategori', 'Gagal');
             return redirect()->back()->withInput($request->all())->withErrors($validator);
         }
-
     }
 
     /**
@@ -130,7 +128,7 @@ class CategoryController extends Controller
         );
 
         if ($validator->fails()) {
-            if($request->has('parent_category')) {
+            if ($request->has('parent_category')) {
                 $request['parent_category'] = Category::select('id', 'title')->find($request->parent_category);
             }
             return redirect()->back()->withInput($request->all())->withErrors($validator);
@@ -148,9 +146,8 @@ class CategoryController extends Controller
 
             Alert::success('Update Kategori', 'Berhasil');
             return redirect()->route('categories.index');
-
         } catch (\Throwable $th) {
-            if($request->has('parent_category')) {
+            if ($request->has('parent_category')) {
                 $request['parent_category'] = Category::select('id', 'title')->find($request->parent_category);
             }
             Alert::error('Update Kategori', 'Gagal');
