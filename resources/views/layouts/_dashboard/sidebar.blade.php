@@ -43,7 +43,8 @@
                 User
             </a>
             {{-- Role --}}
-            <a class="nav-link" href="#">
+            <a class="nav-link {{ set_active(['roles.index', 'roles.show', 'roles.create', 'roles.edit']) }}"
+            href="{{ route('roles.index') }}">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-user-shield"></i>
                 </div>

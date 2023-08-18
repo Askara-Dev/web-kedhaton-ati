@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileManagerController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TagController;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
@@ -60,6 +61,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
 
     // posts
     Route::resource('/posts', PostController::class);
+
+    // roles
+    Route::resource('/roles', RoleController::class);
 
     // File manager
     Route::group(['prefix' => 'filemanager'], function () {
