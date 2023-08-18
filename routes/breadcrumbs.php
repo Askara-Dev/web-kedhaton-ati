@@ -106,6 +106,33 @@ Breadcrumbs::for('file_manager', function (BreadcrumbTrail $trail) {
     $trail->push('File manager', route('filemanager.index'));
 });
 
+// Dashboard > Roles
+Breadcrumbs::for('roles', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push('Roles', route('roles.index'));
+});
+
+// Dashboard > Roles > Detail > [name]
+Breadcrumbs::for('detail_role', function (BreadcrumbTrail $trail, $role) {
+    $trail->parent('roles');
+    $trail->push('Detail', route('roles.show', ['role' => $role]));
+    $trail->push($role->name, route('roles.show', ['role' => $role]));
+});
+
+// Dashboard > Posts > Add
+Breadcrumbs::for('add_role', function (BreadcrumbTrail $trail) {
+    $trail->parent('roles');
+    $trail->push('Add', route('roles.create'));
+});
+
+// Dashboard > Categories > Roles > [name]
+Breadcrumbs::for('edit_role', function (BreadcrumbTrail $trail, $role) {
+    $trail->parent('roles');
+    $trail->push('Edit', route('roles.edit', ['role' => $role]));
+    $trail->push($role->name, route('roles.edit', ['role' => $role]));
+});
+
+
 // Home > Blog
 // Breadcrumbs::for('blog', function (BreadcrumbTrail $trail) {
 //     $trail->parent('home');
