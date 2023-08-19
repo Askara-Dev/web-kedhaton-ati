@@ -36,7 +36,8 @@
             </a>
             {{-- User --}}
             <div class="sb-sidenav-menu-heading">User permission</div>
-            <a class="nav-link" href="#">
+            <a class="nav-link {{ set_active(['users.index', 'users.create', 'users.edit']) }}"
+            href="{{ route('users.index') }}">
                 <div class="sb-nav-link-icon">
                     <i class="fas fa-user"></i>
                 </div>
