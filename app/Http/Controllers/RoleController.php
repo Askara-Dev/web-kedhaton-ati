@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Spatie\Permission\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
+use PhpParser\Node\Stmt\Return_;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class RoleController extends Controller
@@ -25,6 +27,16 @@ class RoleController extends Controller
         return view('roles.index', [
             'roles' => $roles
         ]);
+    }
+
+    public function select(Request $request)
+    {
+        $roles = Role::select('id', 'name')->limit(7);
+        if ($request->has('q')) {
+            $roles->where('name', 'LIKE', "%{$request->q}%");
+        }
+
+        return response()->json($roles->get());
     }
 
     /**
@@ -133,6 +145,14 @@ class RoleController extends Controller
      */
     public function destroy(Role $role)
     {
+
+        if (User::role($role->name)->count()) {
+            Alert::warning('Delete Role ', 'Role ' . $role->name . ' masih digunakan');
+
+            return redirect()->route('roles.index');
+        }
+
+        // Proses delete
         DB::beginTransaction();
         try {
             $role->revokePermissionTo($role->permissions->pluck('name')->toArray());

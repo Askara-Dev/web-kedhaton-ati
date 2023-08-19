@@ -5,6 +5,7 @@ use App\Http\Controllers\FileManagerController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\UserController;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -63,7 +64,11 @@ Route::group(['prefix' => 'dashboard', 'middleware' => ['auth']], function () {
     Route::resource('/posts', PostController::class);
 
     // roles
+    Route::get('/roles/select', [RoleController::class, 'select'])->name('roles.select');
     Route::resource('/roles', RoleController::class);
+
+    // users
+    Route::resource('/users', UserController::class)->except(['show']);
 
     // File manager
     Route::group(['prefix' => 'filemanager'], function () {
