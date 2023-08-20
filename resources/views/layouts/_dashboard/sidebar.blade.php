@@ -40,23 +40,29 @@
                     Tags
                 </a>
             @endcan
-            {{-- User --}}
+            {{-- ------------------------ --}}
             <div class="sb-sidenav-menu-heading">User permission</div>
-            <a class="nav-link {{ set_active(['users.index', 'users.create', 'users.edit']) }}"
-                href="{{ route('users.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                User
-            </a>
+            {{-- User --}}
+            @can('manage_users')
+                <a class="nav-link {{ set_active(['users.index', 'users.create', 'users.edit']) }}"
+                    href="{{ route('users.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    User
+                </a>
+            @endcan
             {{-- Role --}}
-            <a class="nav-link {{ set_active(['roles.index', 'roles.show', 'roles.create', 'roles.edit']) }}"
-                href="{{ route('roles.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                Role
-            </a>
+            @can('manage_roles')
+                <a class="nav-link {{ set_active(['roles.index', 'roles.show', 'roles.create', 'roles.edit']) }}"
+                    href="{{ route('roles.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    Role
+                </a>
+            @endcan
+            {{-- ----------------- --}}
             <div class="sb-sidenav-menu-heading">Settings</div>
             {{-- Filemanager --}}
             <a class="nav-link {{ set_active(['filemanager.index']) }}" href="{{ route('filemanager.index') }}">
