@@ -10,47 +10,59 @@
             <div class="sb-sidenav-menu-heading">Master</div>
 
             {{-- Posts --}}
-            <a class="nav-link {{ set_active(['posts.index', 'posts.create', 'posts.edit', 'posts.show']) }}"
-                href="{{ route('posts.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="far fa-newspaper"></i>
-                </div>
-                Posts
-            </a>
+            @can('manage_posts')
+                <a class="nav-link {{ set_active(['posts.index', 'posts.create', 'posts.edit', 'posts.show']) }}"
+                    href="{{ route('posts.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="far fa-newspaper"></i>
+                    </div>
+                    Posts
+                </a>
+            @endcan
             {{-- Categories --}}
-            <a class="nav-link
+            @can('manage_categories')
+                <a class="nav-link
             {{ set_active(['categories.index', 'categories.create', 'categories.edit', 'categories.show']) }}"
-                href="{{ route('categories.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-bookmark"></i>
-                </div>
-                Categories
-            </a>
+                    href="{{ route('categories.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    Categories
+                </a>
+            @endcan
             {{-- Tags --}}
-            <a class="nav-link {{ set_active(['tags.index', 'tags.create', 'tags.edit']) }} "
-                href="{{ route('tags.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-tags"></i>
-                </div>
-                Tags
-            </a>
-            {{-- User --}}
+            @can('manage_tags')
+                <a class="nav-link {{ set_active(['tags.index', 'tags.create', 'tags.edit']) }} "
+                    href="{{ route('tags.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    Tags
+                </a>
+            @endcan
+            {{-- ------------------------ --}}
             <div class="sb-sidenav-menu-heading">User permission</div>
-            <a class="nav-link {{ set_active(['users.index', 'users.create', 'users.edit']) }}"
-            href="{{ route('users.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-user"></i>
-                </div>
-                User
-            </a>
+            {{-- User --}}
+            @can('manage_users')
+                <a class="nav-link {{ set_active(['users.index', 'users.create', 'users.edit']) }}"
+                    href="{{ route('users.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    User
+                </a>
+            @endcan
             {{-- Role --}}
-            <a class="nav-link {{ set_active(['roles.index', 'roles.show', 'roles.create', 'roles.edit']) }}"
-            href="{{ route('roles.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-user-shield"></i>
-                </div>
-                Role
-            </a>
+            @can('manage_roles')
+                <a class="nav-link {{ set_active(['roles.index', 'roles.show', 'roles.create', 'roles.edit']) }}"
+                    href="{{ route('roles.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    Role
+                </a>
+            @endcan
+            {{-- ----------------- --}}
             <div class="sb-sidenav-menu-heading">Settings</div>
             {{-- Filemanager --}}
             <a class="nav-link {{ set_active(['filemanager.index']) }}" href="{{ route('filemanager.index') }}">

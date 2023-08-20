@@ -12,13 +12,20 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('permission:user_show', ['only' => 'index']);
+        $this->middleware('permission:user_create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:user_update', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:user_delete', ['only' => 'destroy']);
+    }
     /**
      * Display a listing of the resource.
      */
     public function index(Request $request)
     {
         $users = [];
-        if($request->get('keyword')) {
+        if ($request->get('keyword')) {
             $users = User::search($request->keyword)->get();
         } else {
             $users = User::all();
