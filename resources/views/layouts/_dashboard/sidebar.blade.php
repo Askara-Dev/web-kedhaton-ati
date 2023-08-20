@@ -20,14 +20,16 @@
                 </a>
             @endcan
             {{-- Categories --}}
-            <a class="nav-link
+            @can('manage_categories')
+                <a class="nav-link
             {{ set_active(['categories.index', 'categories.create', 'categories.edit', 'categories.show']) }}"
-                href="{{ route('categories.index') }}">
-                <div class="sb-nav-link-icon">
-                    <i class="fas fa-bookmark"></i>
-                </div>
-                Categories
-            </a>
+                    href="{{ route('categories.index') }}">
+                    <div class="sb-nav-link-icon">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                    Categories
+                </a>
+            @endcan
             {{-- Tags --}}
             <a class="nav-link {{ set_active(['tags.index', 'tags.create', 'tags.edit']) }} "
                 href="{{ route('tags.index') }}">
