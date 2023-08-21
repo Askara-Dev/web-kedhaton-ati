@@ -1,15 +1,14 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileManagerController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\TagController;
 use App\Http\Controllers\UserController;
-use App\Models\Tag;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -22,26 +21,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('web.home');
-});
 
-Route::get('/blogs', function () {
-    return view('web.blog');
-});
 
-Route::get('/contact', function () {
-    return view('web.contact');
-});
+Route::get('/', [BlogController::class, 'home'])->name('blog.home');
 
-Route::get('/about', function () {
-    return view('web.about');
-});
+Route::get('/blogs', [BlogController::class, 'blog'])->name('blog.blogs');
 
-// for testing
-// Route::get('/test',function() {
-//     return view('welcome');
-// });
+Route::get('/contact', [BlogController::class, 'contact'])->name('blog.contact');
+
+Route::get('/about', [BlogController::class, 'about'])->name('blog.about');
+
+Route::get('/posts/{slug}', [BlogController::class, 'showDetailPost'])->name('blog.posts.detail');
+
+Route::get('/categories/{slug}', [BlogController::class, 'showPostsByCategory'])->name('blog.posts.category');
 
 Auth::routes([
     'register' => false,

@@ -19,27 +19,36 @@ class Post extends Model
     ];
 
     // relation model tag
-    public function tags() {
+    public function tags()
+    {
         return $this->belongsToMany(Tag::class)->withTimestamps();
     }
 
     // relation model categories
-    public function categories() {
+    public function categories()
+    {
         return $this->belongsToMany(Category::class)->withTimestamps();
     }
 
-    public function scopeSearch($query, $title) {
+    public function scopeSearch($query, $title)
+    {
         return $query->where('title', 'LIKE', "%{$title}%");
     }
 
     // scope
-    public function scopePublish($query) {
+    public function scopePublish($query)
+    {
         return $query->where('status', "publish");
     }
 
     // scope
-    public function scopeDraft($query) {
+    public function scopeDraft($query)
+    {
         return $query->where('status', "draft");
     }
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
