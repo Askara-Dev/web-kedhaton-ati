@@ -61,6 +61,7 @@ class BlogController extends Controller
 
     public function showPostsByCategory($slug)
     {
+
         $posts = Post::publish()->whereHas('categories', function ($query) use ($slug) {
             return $query->where('slug', $slug);
         })->get();
