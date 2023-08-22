@@ -35,6 +35,8 @@ Route::get('/posts/{slug}', [BlogController::class, 'showDetailPost'])->name('bl
 
 Route::get('/categories/{slug}', [BlogController::class, 'showPostsByCategory'])->name('blog.posts.category');
 
+Route::get('/tags/{slug}', [BlogController::class, 'showPostsByTag'])->name('blog.posts.tag');
+
 Auth::routes([
     'register' => false,
 ]);

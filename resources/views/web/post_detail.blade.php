@@ -30,7 +30,7 @@
                 <!-- ======= Sidebar ======= -->
 
                 <div class="aside-block">
-                    <h3 class="aside-title">Categories</h3>
+                    <h3 class="aside-title">Kategori</h3>
                     <ul class="aside-links list-unstyled">
                         @foreach ($categories as $category)
                             <li><a href="{{ route('blog.posts.category', ['slug' => $category->slug]) }}">
@@ -53,7 +53,11 @@
                     <h3 class="aside-title">Tags</h3>
                     <ul class="aside-tags list-unstyled">
                         @foreach ($post->tags as $tag)
-                            <li><a href="#">{{ $tag->title }}</a></li>
+                            <li>
+                                <a href="{{ route('blog.posts.tag', ['slug' => $tag->slug]) }}">
+                                    {{ $tag->title }}
+                                </a>
+                            </li>
                         @endforeach
                         {{-- <li><a href="category.html">Culture</a></li>
                             <li><a href="category.html">Sport</a></li>

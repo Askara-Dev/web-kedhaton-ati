@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Post;
+use App\Models\Tag;
 
 class BlogController extends Controller
 {
@@ -71,6 +72,22 @@ class BlogController extends Controller
         return view('web.posts_category', [
             'posts' => $posts,
             'category' => $category,
+            'categories' => Category::all(),
+            'postsFootbar' => Post::publish()->latest()->take(3)->get(),
+        ]);
+    }
+
+    public function showPostsByTag($slug)
+    {
+        $posts = Post::publish()->whereHas('tags', function($query) use($slug) {
+            return $query->where('slug', $slug);
+        })->get();
+
+        $tag = Tag::where('slug', $slug)->first();
+
+        return view('web.posts_tag', [
+            'posts' => $posts,
+            'tag' => $tag,
             'categories' => Category::all(),
             'postsFootbar' => Post::publish()->latest()->take(3)->get(),
         ]);
