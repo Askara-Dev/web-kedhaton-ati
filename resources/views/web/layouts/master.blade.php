@@ -5,9 +5,11 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Kedhaton Ati</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+    <title>Kedhaton Ati - Laboratorium Wayang Virtual</title>
+    <meta name="description" content="Kedhaton Ati - Laboratorium Wayang Virtual" />
+    <meta name="keywords"
+        content="Kedhaton Ati, kedhatonati, budaya, wayang, surakarta, budaya wayang, nguriuri budaya, laboratorium, laboratorium wayang, budaya virtual" />
+
 
     <!-- Favicons -->
     <!-- <link href="assets/img/favicon.png" rel="icon">
