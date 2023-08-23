@@ -15,7 +15,7 @@
             @endcan
             <!-- edit -->
             @can('category_update')
-                <a href="{{ route('categories.update', ['category' => $category]) }}"
+                <a href="{{ route('categories.edit', ['category' => $category]) }}"
                     class="btn btn-sm btn-info" role="button">
                     <i class="fas fa-edit"></i>
                 </a>
