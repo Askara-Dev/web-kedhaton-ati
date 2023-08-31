@@ -5,7 +5,7 @@
         <div class="container" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h1 class="page-title">About us</h1>
+                    <h1 class="page-title">Tentang kami</h1>
                 </div>
             </div>
 
@@ -16,17 +16,22 @@
                         <img src="assets/img/logo.png" alt="" class="img-fluid">
                     </a>
                     <div class="ps-md-5 mt-4 mt-md-0">
-                        <div class="post-meta mt-4">About us</div>
-                        <h2 class="mb-4 display-4">Company History</h2>
+                        <div class="post-meta mt-4">Tentang kami</div>
+                        <h2 class="mb-4 display-4">Sejarah</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime,
-                            adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident
-                            inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam
-                            temporibus aut!</p>
-                        <p>Fugit eaque illum blanditiis, quo exercitationem maiores autem laudantium unde excepturi dolores
-                            quasi eos vero harum ipsa quam laborum illo aut facere voluptates aliquam adipisci sapiente
-                            beatae ullam. Tempora culpa iusto illum accusantium cum hic quisquam dolor placeat officiis
-                            eligendi.</p>
+                        <p>
+                            Kedhaton Ati merupakan sebuah laboratorium wayang dan kesenian yang berbasis virtual. Berdiri
+                            pada tanggal 9 Mei 2020 yang lalu, Laboratorium Wayang Kedhaton Ati diharapkan mampu berdiri
+                            sebagai tempat pembelajaran, penelitian dan pengembangan wayang yang dapat diakses oleh siapapun
+                            dan kapanpun melalui gadget masyarakat pecinta wayang.
+
+                        </p>
+                        <p>
+                            Meski demikian, kegiatan-kegiatan yang dilakukan tidak melulu berbasisvirtual, akan tetapi pada
+                            kenyataannya, kegiatan-kegiatan tersebut tetap dilakukan secara komunal dengan membentuk
+                            kelompok belajar bersama, focus grup discusion, yang hasilnya secara aktif ditayangkan pada
+                            kanal media sosial milik Kedhaton Ati agar dapat dikonsumsi oleh publik secara terbuka.
+                        </p>
                     </div>
                 </div>
 
@@ -35,17 +40,20 @@
                         <img src="assets/img/logo.png" alt="" class="img-fluid">
                     </a>
                     <div class="pe-md-5 mt-4 mt-md-0">
-                        <div class="post-meta mt-4">Mission &amp; Vision</div>
-                        <h2 class="mb-4 display-4">Mission &amp; Vision</h2>
+                        <div class="post-meta mt-4">Visi &amp; Misi</div>
+                        <h2 class="mb-4 display-4">Visi &amp; Misi</h2>
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, perspiciatis repellat maxime,
-                            adipisci non ipsam at itaque rerum vitae, necessitatibus nulla animi expedita cumque provident
-                            inventore? Voluptatum in tempora earum deleniti, culpa odit veniam, ea reiciendis sunt ullam
-                            temporibus aut!</p>
-                        <p>Fugit eaque illum blanditiis, quo exercitationem maiores autem laudantium unde excepturi dolores
-                            quasi eos vero harum ipsa quam laborum illo aut facere voluptates aliquam adipisci sapiente
-                            beatae ullam. Tempora culpa iusto illum accusantium cum hic quisquam dolor placeat officiis
-                            eligendi.</p>
+                        <p>
+                            Kegiatan-kegiatan yang dilakukan saat ini ditopang dari penjualan cinderamata berupa kaos dan
+                            produk lain yang bertemakan wayang, dan hasilnya berupa penelitian dan dan kegiatan belajar
+                            bersama dimana manfaatnya tetap kembali kepada masyarakat wayang di dunia.
+                        </p>
+                        <p>
+                            Kami membuka kesempatan belajar bersama kepada siapapun yang ingin mengenal wayang lebih dekat
+                            melalui kegiatan-kegiatan penelitian, penyusunan naskah pedalangan, dan pelatihan-pelatihan
+                            terkait wayang dan sekitarnya serta mengharap sumbangsih para donatur pecinta wayang untuk
+                            berkerjasama bersama kami.
+                        </p>
                     </div>
                 </div>
 
