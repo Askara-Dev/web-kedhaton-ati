@@ -15,7 +15,7 @@
                         <span>{{ $category->title }}</span>
                     @endforeach
                     <span class="mx-1">&bullet;</span>
-                    <span>{{ $post->created_at }}</span>
+                    <span>{{ $post->date }}</span>
                 </div>
                 <span>
                     {{ $post->title }}

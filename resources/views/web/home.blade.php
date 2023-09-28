@@ -60,7 +60,7 @@
                                             <span>{{ $category->title }}</span>
                                         @endforeach
                                         <span class="mx-1">&bullet;</span>
-                                        <span>{{ $post->created_at }}</span>
+                                        <span>{{ $post->date }}</span>
                                     </div>
                                     <h2><a href="single-post.html">{{ $post->title }}</a></h2>
                                     <p class="mb-4 d-block">
