@@ -19,6 +19,8 @@
     @stack('css-external')
     {{-- css external --}}
     @stack('css-internal')
+    {{-- date picker --}}
+    @stack('style')
 </head>
 
 <body>
@@ -66,6 +68,8 @@
     {{-- javascript external --}}
     @stack('javascript-external')
     @stack('javascript-internal')
+    {{-- js --}}
+    @stack('script')
 </body>
 
 </html>

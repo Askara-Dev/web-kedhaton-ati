@@ -156,6 +156,24 @@
                                         @endforeach
                                     </select>
                                 </div>
+                                {{-- date picker --}}
+                                <div class="form-group">
+                                    <label for="post_date" class="font-weight-bold">
+                                        Tanggal Post
+                                    </label>
+                                    <div class='input-group date' id='post_date'>
+                                        <input type="datetime-local" name="date" value="{{ old('date') }}"
+                                            class="form-control @error('date') is-invalid @enderror" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                        @error('date')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                        @enderror
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">
@@ -175,6 +193,10 @@
     </div>
 @endsection
 
+@push('style')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+@endpush
+
 @push('css-external')
     <link rel="stylesheet" href="{{ asset('assets/vendor/select2/css/select2.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/vendor/select2/css/select2-bootstrap4.min.css') }}">
@@ -189,6 +211,13 @@
     <script src="{{ asset('vendor/tinymce5/tinymce.min.js') }}"></script>
     {{-- select2 --}}
     <script src="{{ asset('assets/vendor/select2/js/select2.min.js') }}"></script>
+@endpush
+
+@push('script')
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script>
+        flatpickr("input[type=datetime-local]");
+    </script>
 @endpush
 
 @push('javascript-internal')

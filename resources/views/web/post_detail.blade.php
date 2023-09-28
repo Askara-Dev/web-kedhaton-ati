@@ -12,7 +12,7 @@
                             <div class="post-meta"><span class="date"></span>{{ $category->title }}<span
                                     class="mx-1">&bullet;</span>
                         @endforeach
-                        <span>{{ $post->created_at }}</span>
+                        <span>{{ $post->date }}</span>
                     </div>
                     <h6 class="mb-1">By: {{ $post->user->name }} </h6>
                     <h1 class="mb-5">{{ $post->title }}</h1>

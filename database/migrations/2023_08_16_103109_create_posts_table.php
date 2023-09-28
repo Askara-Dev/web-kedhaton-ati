@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('description', 240);
             $table->text('content');
             $table->enum('status', ['publish', 'draft']);
+            // $table->string('date', 10);
             $table->timestamps();
 
             $table->unsignedBigInteger('user_id');

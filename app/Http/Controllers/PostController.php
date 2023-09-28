@@ -74,7 +74,8 @@ class PostController extends Controller
                 'content' => 'required',
                 'category' => 'required',
                 'tag' => 'required',
-                'status' => 'required'
+                'status' => 'required',
+                'date' => 'required'
             ]
         );
 
@@ -96,6 +97,7 @@ class PostController extends Controller
                 'description' => $request->description,
                 'content' => $request->content,
                 'status' => $request->status,
+                'date' => $request->date,
                 'user_id' => Auth::user()->id,
             ]);
 
@@ -158,7 +160,8 @@ class PostController extends Controller
                 'content' => 'required',
                 'category' => 'required',
                 'tag' => 'required',
-                'status' => 'required'
+                'status' => 'required',
+                'date' => 'required'
             ]
         );
 
@@ -180,6 +183,7 @@ class PostController extends Controller
                 'description' => $request->description,
                 'content' => $request->content,
                 'status' => $request->status,
+                'date' => $request->date,
                 'user_id' => Auth::user()->id,
             ]);
 

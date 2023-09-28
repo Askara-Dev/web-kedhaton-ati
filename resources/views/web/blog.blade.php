@@ -34,7 +34,7 @@
                                             <span class="date">{{ $tag->title }}</span>
                                         @endforeach
                                         <span class="mx-1">&bullet;</span>
-                                        <span>{{ $post->created_at }}</span>
+                                        <span>{{ $post->date }}</span>
                                     </div>
                                     <h3><a href="{{ route('blog.posts.detail', ['slug' => $post->slug]) }}">
                                             {{ $post->title }}
