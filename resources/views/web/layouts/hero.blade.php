@@ -9,37 +9,41 @@
                             <a href="/blogs" class="img-bg d-flex align-items-end"
                                 style="background-image: url('assets/img/hero-1.png');">
                                 <div class="img-bg-inner">
-                                    <h2>The Best Homemade Masks for Face (keep the Pimples Away)</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est
-                                        mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam
-                                        obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.
+                                    <h2>Kabar terkini dari kedhaton Ati</h2>
+                                    <p>Tertarik mendapatkan informasi menarik tentang wayang dan kedhaton ati? Segera
+                                        baca jelajahi blog kami dan rasakan sensasi penuh wawasan dalam memahami tradisi
+                                        budaya wayang yang begitu kaya dan berwarna
                                     </p>
                                 </div>
                             </a>
                         </div>
 
                         <div class="swiper-slide">
-                            <a href="/blogs" class="img-bg d-flex align-items-end"
+                            <a href="/about" class="img-bg d-flex align-items-end"
                                 style="background-image: url('assets/img/hero-2.png');">
                                 <div class="img-bg-inner">
-                                    <h2>17 Pictures of Medium Length Hair in Layers That Will Inspire Your New Haircut
+                                    <h2>Menyelami Kedhaton Ati: Memahami Lebih Dalam Profil Kami
                                     </h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est
-                                        mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam
-                                        obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.
+                                    <p>Selamat datang di Kedhaton Ati, pintu menuju dunia magis seni wayang! Di sini,
+                                        kami membuka tirai rahasia seni tradisional Indonesia yang kaya, mengajak Anda
+                                        untuk merenung dalam legenda dan cerita epik, dan merasakan getaran budaya yang
+                                        mendalam. Temukan bagaimana wayang memainkan peran penting dalam masyarakat
+                                        kita, dan bagaimana ia menjadi jembatan antara masa lalu dan masa kini.Selamat
+                                        datang di perjalanan kami melalui seni wayang di Kedhaton Ati.
                                     </p>
                                 </div>
                             </a>
                         </div>
 
                         <div class="swiper-slide">
-                            <a href="/blogs" class="img-bg d-flex align-items-end"
+                            <a href="/posts/babak-baru-pertunjukan-wayang-kulit" class="img-bg d-flex align-items-end"
                                 style="background-image: url('assets/img/hero-3.png');">
                                 <div class="img-bg-inner">
-                                    <h2>13 Amazing Poems from Shel Silverstein with Valuable Life Lessons</h2>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem neque est
-                                        mollitia! Beatae minima assumenda repellat harum vero, officiis ipsam magnam
-                                        obcaecati cumque maxime inventore repudiandae quidem necessitatibus rem atque.
+                                    <h2>Babak Baru Pertunjukan Wayang Kulit</h2>
+                                    <p>Pertunjukan wayang kulit memiliki eksistensi yang tidak diragukan lagi bagi
+                                        masyarakat Jawa. Selain sebagai pertunjukan hiburan, pada acara-acara tertentu
+                                        wayang dipercaya dapat menjadi media penghubung antara alam manusia dan alam roh
+                                        leluhur. Menurut Bambang Murtiyoso, kecenderungan untuk menghadirkan wa..
                                     </p>
                                 </div>
                             </a>
